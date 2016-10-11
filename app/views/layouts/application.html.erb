@@ -5,10 +5,48 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  
 </head>
 <body>
 
-<%= yield %>
+  
+  <div class = "container">
+    <div class = "sidebar">
+      <div id ="logo">
+        <%= link_to root_path do %>
+        <%= image_tag "logo.svg" %>
+        <% end %>
+      </div>
+    
+  
+      
+      <ul>
+        <li><%= link_to "About", root_path %></li>
+        <li><%= link_to "Blogs", root_path %></li>
+        <li><%= link_to "Home ", root_path %></li>
+      </ul>
+   
+      <ul>
+         <li><a href ="https://www.facebook.com">Facebook</a></li>
+         <li><a href= "https://www.twitter.com">Twitter</a></li>
+         <li><a href = "https://www.plus.google.com">GPlus</a></li>
+      </ul>
+    
+    
+    </div>
 
-</body>
+    <div id ="main_content">
+      <div id = "header">
+	<button class ="button"><%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %></button>
+	<button class = "button ">Login</button>
+
+      </div>
+      <div id = "content">
+	<%= yield %>
+      </div>
+   </div>
+  </div>
+</body>y
 </html>

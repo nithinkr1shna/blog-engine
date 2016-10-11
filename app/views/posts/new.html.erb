@@ -1,14 +1,15 @@
-<h1> New Post </h1>
+<h1 class = "title"> New Post </h1>
 <%= form_for :post , url: posts_path do |f| %>
 <p>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %>
+  <h3><%= f.label :title  %><br></h3>
+  <%= f.text_field :title, :class =>'title'  %>
 </p>
 <p>
-  <%= f.label :body %><br>
-  <%= f.text_field :body %>
+  <h4> <%= f.label :body %></h4><br>
+  <%= f.text_field :body, :class =>'text_field_body' %>
 </p>
-<p>
-  <%= f.submit %>
+
+<p >
+  <%= f.submit 'Submit', :class =>'submit_button' %>
 </p>
 <% end %>
