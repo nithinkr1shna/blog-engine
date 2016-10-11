@@ -1,5 +1,17 @@
 <h1 class = "title"> New Post </h1>
 <%= form_for :post , url: posts_path do |f| %>
+
+ <% if @post.errors.any? %>
+  <div class="errors">
+   <p><h3><%= pluralize(@post.errors.count, "error") %> prevented the post from posting </h3></p>
+      <% @post.errors.full_messages.each do |msg|%>
+        <ul>
+          <li><%= msg %></li>
+       </ul>
+	<% end %>
+  </div>
+ <% end %>
+  
 <p>
   <h3><%= f.label :title  %><br></h3>
   <%= f.text_field :title, :class =>'title'  %>

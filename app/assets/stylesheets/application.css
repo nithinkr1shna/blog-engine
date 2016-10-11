@@ -147,11 +147,25 @@ hr {
 .title {
     margin-bottom: 2em;
     margin-top: 1em;
+   
 }
+
 
 .text_field_body {
     width: 75%;
     height: 8em;
 }
 
-g
+.errors ul {
+    background-color: #eac9c9;
+    padding-left: 2em;
+    
+}
+.date {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+.body {
+    margin-right: 1em;
+    
+}
