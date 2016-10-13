@@ -1,9 +1,0 @@
-<% @posts.each do |post| %>
-<div class ="post_wrapper">
-  <h3 id = "title" ><%= link_to post.title, post %></h3>
-  <h5 class = "date"><%= post.created_at.strftime("%B, %d,  %Y") %> </h5>
-  <hr>
-  
-</div>
-<% end %>
-
