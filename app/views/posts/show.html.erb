@@ -4,6 +4,7 @@
 
 <p class ="date">
   Submitted <%= time_ago_in_words(@post.created_at)%> Ago
+  |<%= link_to "edit", edit_post_path %>
 </p>
  
 <p class= "body">
