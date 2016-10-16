@@ -1,0 +1,9 @@
+ <% @allcomments.each do |comment| %>
+    <div >
+      <%= comment.name %>
+      <%= comment.body %>
+    </div>
+  <% end %>
+
+
+

@@ -169,3 +169,10 @@ hr {
     margin-right: 1em;
     
 }
+.comments {
+    padding-left: 2%;
+    padding-top: 0.5%;
+}
+#comment_body {
+    padding-left: 1%;
+}

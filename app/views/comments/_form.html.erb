@@ -1,0 +1,14 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+<div >
+  <h3><%= f.label :name %></h3>
+  <%= f.text_field :name, :class => 'title'%>
+</div>
+
+<div>
+  <h3><%= f.label :body %></h3>
+  <%= f.text_area :body, :class => 'text_field_body' %>
+</div>
+<div>
+  <%= f.submit 'Submit', :class => 'submit_button' %>
+  </div>
+<% end %>

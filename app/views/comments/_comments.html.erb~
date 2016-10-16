@@ -1,0 +1,4 @@
+<div >
+  <%= comment.name %>
+  <%= comment.body %>
+</div>
