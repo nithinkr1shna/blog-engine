@@ -39,9 +39,16 @@
 
     <div id ="main_content">
       <div id = "header">
-	<button class ="button"><%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %></button>
-	<button class = "button ">Login</button>
 
+	
+	<% if user_signed_in? %>
+	<button class ="button"><%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %></button>
+	<% end %>
+	<% if !user_signed_in?%>
+	<button class = "button "><%= link_to('Login', new_user_session_path) %></button>
+	<% else %>
+	<button class = "button "><%= link_to "LogOut", destroy_user_session_path, :method => :delete %></button>
+       <% end %>
       </div>
       <div id = "content">
 	<%= yield %>

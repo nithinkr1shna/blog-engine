@@ -54,3 +54,4 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'devise', '~> 3.4.0'
