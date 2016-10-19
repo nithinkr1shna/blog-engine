@@ -7,53 +7,63 @@
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   
 </head>
 <body>
 
   
-  <div class = "container">
-    <div class = "sidebar">
-      <div id ="logo">
-        <%= link_to root_path do %>
-        <%= image_tag "logo.svg" %>
-        <% end %>
+
+  <div class ="container">
+      <div class ="header_logo">
+        <h1 class ="blog_name">
+	  The Blogger
+	 </h1>
       </div>
-    
-  
-      
-      <ul>
-        <li><%= link_to "About", "/pages/about" %></li>
-        <li><%= link_to "Blogs", "/posts" %></li>
-        <li><%= link_to "Home ", root_path %></li>
-      </ul>
-   
-      <ul>
-         <li><a href ="https://www.facebook.com">Facebook</a></li>
-         <li><a href= "https://www.twitter.com">Twitter</a></li>
-         <li><a href = "https://www.plus.google.com">GPlus</a></li>
-      </ul>
-    
-    
+    <div class = " menu_navs">    
+          <ul>
+               <li><%= link_to "About", "/pages/about" %></li>
+               <li><%= link_to "Blogs", "/posts" %></li>
+               <li><%= link_to "Home ", root_path %></li>
+               
+               
+	  	
+	 <li> <% if user_signed_in? %>
+	      <%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %>
+	  <% end %>
+	  <% if !user_signed_in?%>
+	      <%= link_to('Login', new_user_session_path) %>
+             <% end %>
+	 </li>
+	 </ul>
     </div>
-
-    <div id ="main_content">
-      <div id = "header">
-
-	
-	<% if user_signed_in? %>
-	<button class ="button"><%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %></button>
-	<% end %>
-	<% if !user_signed_in?%>
-	<button class = "button "><%= link_to('Login', new_user_session_path) %></button>
-	<% else %>
-	<button class = "button "><%= link_to "LogOut", destroy_user_session_path, :method => :delete %></button>
-       <% end %>
-      </div>
+    </div>
       <div id = "content">
 	<%= yield %>
+	<br>
       </div>
    </div>
+</div>
+
+<div class = "footer">
+  <div class = "footer_left">
+    <ul>
+      <li>
+	   <a href ="https://www.facebook.com">Facebook</a>
+      </li>
+      <li><a href ="https://www.twitter.com">Twitter</a>
+     </ul>
+  </div>
+  <div class ="footer_right vertical">
+    <ul>
+      <li>
+  <% if user_signed_in? %>
+        <%= link_to "LogOut", destroy_user_session_path, :method => :delete %>
+	<% end%>
+      </li>
+      </ul>
+  </div>
+  
   </div>
 </body>
 </html>

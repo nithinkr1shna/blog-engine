@@ -2,47 +2,53 @@
     margin:0;
     padding:0;
 }
-
-.sidebar {
+.container {
+    display:flex;
+}
+.header_logo{
     float: left;
-    position: fixed;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 30px;
-    height: 1000px;
-    background-color: #333;
-    width: 15%;
+    width: 40%;
+    background-color: #2B2D32;
+    
  }
+.menu_navs {
+    float:left;
+    width: 60%;
+    background-color : #2B2D32;
+    
+}
 
 
 ul {
     
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 3%;
+    padding-left: 5%;;
     overflow: hidden;
+    float: right;
+  
+}
+li {
+    float: left;
+    margin: 1em;
 }
 
 
-
-li a {
+.menu_navs li a {
     display: block;
     color: white;
     text-align: center;
     text-decoration: none;
+    font-size: xx-large;
+}
+
+
+
+.header_logo img {
+    width: 5%;
+    height: 5%;
     
-}
-
-li a:hover {
-    background-color: cadetblue;
-}
-
-#logo img {
-    width: 50%;
-    height: 50%;
-    padding-top: 2em;
-    padding-left: 1.5em;
-    padding-bottom: 1em;
-    padding-right:1em;
+    
 }
 
 #main_content {
@@ -51,21 +57,21 @@ li a:hover {
     margin-left: 15%;
    
 }
-
+.blog_name {
+    margin: 3%;
+    color: white;
+}
 #header {
     background-color:#333;
     
 }
 
 
-.container {
-    width: 100%;
-    height: 100%;
-}
-
 #content {
-  padding-left: 5%;
+    padding-left: 10%;
+    padding-right:10%;
   padding-top: 3%;
+  font-family: 'Raleway', sans-serif;
   
 }
 
@@ -73,26 +79,23 @@ li a:hover {
 .button {
 	background-color:transparent;
 	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1.5px solid #3497ed;
+	-webkit-border-radius:28px;	
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
-	padding:8px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #283966;
-	margin: 1em;
+	padding: .5em;
+
 	
 	
 }
 a.link-to-text-color {
    color:  #ffffff;   
 }
-.button:hover {
-	background-color:cadetblue;
+
 }
 .button:active {
 	position:relative;
@@ -121,11 +124,11 @@ hr {
 }
 
 .submit_button {
-	background-color:#77b55a;
+
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:28px;
-	border:1px solid #4b8f29;
+	border:1px solid #2B2D32;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -135,9 +138,7 @@ hr {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
 	margin-top: 2em;
-}
-.submit_button:hover {
-	background-color:#72b352;
+	background-color:#2B2D32;
 }
 .submit_button:active {
 	position:relative;
@@ -175,4 +176,37 @@ hr {
 }
 #comment_body {
     padding-left: 1%;
+}
+
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #2B2D32;
+  text-align: center;
+  display: flex;
+}
+
+.footer_left {
+    float: left;
+    width:50%;
+}
+.footer_right {
+    float: left;
+    width:50%;
+    
+}
+.footer li a {
+    font-size:medium;
+    text-decoration: none;
+    color: white;
+}
+.vertical {
+    border-left:  solid grey;
+}
+.footer_right li a {
+    font-size:medium;
+    text_decoration:none;
+    color: white;
 }
