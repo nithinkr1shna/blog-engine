@@ -14,38 +14,53 @@
 
   
 
-  <div class ="container">
-      <div class ="header_logo">
-        <h1 class ="blog_name">
-	  The Blogger
-	 </h1>
+ 
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class ="row">
+      <div class = "col-md-6"'>
+	<h1>The Blogger</h1>
       </div>
-    <div class = " menu_navs">    
-          <ul>
+      <div class ="col-md-6">
+ <ul>
                <li><%= link_to "About", "/pages/about" %></li>
                <li><%= link_to "Blogs", "/posts" %></li>
                <li><%= link_to "Home ", root_path %></li>
+	       
                
                
 	  	
 	 <li> <% if user_signed_in? %>
-	      <%= link_to "New Post", new_post_path, :class=> 'link-to-text-color' %>
+	      <%= link_to "New Post", new_post_path %>
 	  <% end %>
 	  <% if !user_signed_in?%>
 	      <%= link_to('Login', new_user_session_path) %>
              <% end %>
 	 </li>
-	 </ul>
-    </div>
-    </div>
-      <div id = "content">
-	<%= yield %>
-	<br>
-      </div>
-   </div>
-</div>
+ </ul>
+ </div>
+ </div>
+  </div>
+</nav>
 
-<div class = "footer">
+
+  
+  <div class ="container">
+         <div class = "row">
+	        <div class ="col-md-9">
+	          <%= yield %>
+		  <br>
+                </div>
+                <div class ="col-md-3">
+		  
+                </div>
+         </div>
+  </div>
+  
+
+
+<div class = "footer navbar-fixed-bottom">
   <div class = "footer_left">
     <ul>
       <li>
@@ -63,7 +78,6 @@
       </li>
       </ul>
   </div>
-  
-  </div>
+</div>
 </body>
 </html>
