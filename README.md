@@ -1,5 +1,5 @@
 The demo blog engine can be viewed at:
 ```
-https://infinite-gorge-81486.herokuapp.com/
+[Blog-Engine](https://infinite-gorge-81486.herokuapp.com/)
 ```
 
